@@ -1,0 +1,94 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, #eb9797, #8b0404);
+}
+
+.view-button {
+  background-color: rgb(15, 116, 179);
+  color: white;
+  border: none;
+  height: 30;
+  width: 90;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.view-button:hover {
+  opacity: 0.7;
+}
+
+.view-button:active {
+  opacity: 0.9;
+}
+
+.thumbnail {
+  width: 300px;
+}
+
+.video-preview {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+.title {
+  margin-top: 0;
+  color: black;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.title2 {
+  margin-top: 0;
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.video-title {
+  margin-top: 0;
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.thumbnail {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  border-width: 2px;
+  border-style: none;
+  background-color: black;
+  border-color: blue;
+}
+
+body {
+  /* This style below will be inherited */
+  font-family: Roboto, Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(248, 248, 248);
+}
+
+.buttonPosition {
+  display: inline-block;
+  vertical-align: top;
+  width: 70px;
+}
+
+.video-titlePosition {
+  display: inline-block;
+  width: 220px;
+}
