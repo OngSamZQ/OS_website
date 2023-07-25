@@ -199,7 +199,7 @@ section#hero {
 .summary {
   margin-top: 0;
   color: black;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: bold;
   width: 900px;
   background-color: transparent;
@@ -208,6 +208,25 @@ section#hero {
 
 .summary:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ProfilePic {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+}
+
+.thumbnail_2 {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px; /* Add spacing at the end (right side) */
+  object-fit: contain;
+  object-position: center;
+  border-width: 2px;
+  border-style: none;
+  background-color: black;
+  border-color: blue;
 }
 
 .ProLog-title {
@@ -220,6 +239,8 @@ section#hero {
   justify-content: center;
   text-align: center;
 }
+
+
 
 .Prologtext {
   margin-top: 30px;
@@ -266,6 +287,7 @@ section#hero {
   display: inline-block;
   width: 220px;
 }
+
 
 
 /* Responsive Design*/
