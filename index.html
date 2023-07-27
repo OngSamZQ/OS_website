@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamOng Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo_4.png" class="logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Porfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Project Manager</p>
+          <h1>Hi, I'm <span>Ong </span>Sam<br>from Singapore</h1>
+        </div>
+      </div>
+    </div>
+  <!-- ---------About--------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img id="profileImage" src="images/SamPic_3.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <P>I am a lifelong learner who embraces technology to improve business processes. 
+              With 14 years of experience in logistics and 2 years IT project management, 
+              I have successfully delivered projects in both sectors. My strength lies in my ability to lead teams, 
+              communicate effectively, and solve problems creatively. 
+              I am always looking for new challenges and opportunities to grow as a professional.</P>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab(event, 'experience', 'images/SamPic_3.jpg')">Experience</p>
+              <p class="tab-links" onclick="opentab(event, 'skills', 'images/SamPic_3_3.jpg')">Skills</p>
+              <p class="tab-links" onclick="opentab(event, 'achievements', 'images/SamPic_3_2.jpg')">Achievements</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="experience">
+              <Ul>
+                <li><span>Jun 2021 - Present</span><br>Project Manager (Operation), IT Project (government project)</li>
+                <li><span>Mar 2021 - Jun 2021</span><br>BIM Modeler (Internship), IT Project</li>
+                <li><span>Jun 2013 - Sep 2020</span><br>Logistics Manager, Oil & Gas (EPCI, T&I)</li>
+                <li><span>AUG 2011 - JUN 2013</span><br>Sales Supervisor, Freight Forwarding</li>
+                <li><span>May 2010 - AUG 2011</span><br>Logistics Executive, Freight Forwarding, 3PL</li>
+                <li><span>Jan 2006 - May 2010</span><br>Freight Executive , Freight Forwarding, 3PL</li>
+              </Ul>
+            </div>
+
+            <div class="tab-contents" id="skills">
+              <Ul>
+                <li><span>Programming</span><br>Python, HTML 5, CSS 3, Java Script</li>
+                <li><span>Building Information Modelling (BIM)</span><br>Revit, ArchiCAD, Navisworks, Solibri,  enscape</li>
+                <li><span>Internet of things (IOT), 3D modelling</span><br>Arduino, tinkercad, SketchUP, 3DmaX, AutoCAD</li>
+                <li><span>Data analysis and visualization</span><br>RapidMiner</li>
+                <li><span>Microsoft</span><br>Words, Excel, Power Point</li>
+                <li><span>International Shipping</span><br>3rd Country shipment, incoterms, Form M, COO, Permit, DG Goods</li>
+              </Ul>
+            </div>
+
+            <div class="tab-contents"id="achievements">
+              <Ul>
+                <li><span>2022</span><br>Project Manager, implementation of helpdesk support model</li>
+                <li><span>2022</span><br>Project Manager, Process improvement (JIRA)</li>
+                <li><span>2021 (Academic projects)</span><br>BIM Customisation Project <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/yon0IhUyQUI')">Video here</a></li>
+                <li><span>2021 (Academic projects)</span><br>BIM Design & Co-ordination <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/2TTJCLB6lLo')">Video here</a></li>
+                <li><span>2021 (SGUS)</span><br>Mentioned by DPM Heng Swee Keat’s Budget Debate <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/R49-y83fZE8')">Video here</a></li>
+                <li><span>2016</span><br>Logistics Manager, Cost saving initiative award</li>
+                <li><span>2015</span><br>Participated in Community service</li>
+
+                  
+              </Ul>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      var profileImage = document.getElementById("profileImage");
+    
+      function opentab(event, tabname, imageUrl) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    
+        // Update the image source with the selected tab's image URL
+        profileImage.src = imageUrl;
+      }
+
+      function openVideoInNewWindow(videoUrl) {
+        window.open(videoUrl, '_blank');
+        }
+    </script>
+  </body>
+
+</html>
