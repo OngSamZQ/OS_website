@@ -14,13 +14,15 @@
       <div class="container">
         <nav>
           <img src="images/logo_4.png" class="logo">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Porfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Porfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Project Manager</p>
@@ -165,19 +167,50 @@
             <div class="layer">
               <h3>Ship's Spares</h3>
               <p>Shipment for ship's spare and delivered them to the vessels. 
-                Inspected the cargo to ensure the seaworthy packing and product delivery according to the purchase order.</p>
+                Inspected the cargo to ensure the seaworthy packing and product delivered according to the purchase order.</p>
               <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
 
         </div>
-        <a href="#" class="btn">See more</a>
+        <!-- ----------hide for the see more button---------- -->
+        <!-- <a href="#" class="btn">See more</a> -->
       </div>
     </div>
 
-             <!-- 
-                -->
+    <!-- ---------Contact--------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-regular fa-paper-plane"></i> samongzq@ymail.com</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ong-sam-4275533a/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <!-- ----------hide for the see more button---------- -->
+            <!-- <a href="images/BCAA e-News August 2021.pdf" class="btn btn2">BCAA e-news Aug 21</a> -->
+          </div>
 
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p><i class="fa-sharp fa-regular fa-copyright"></i> 2023 Ong Sam. All rights reserved.</p>
+      </div>
+    </div>
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
@@ -201,6 +234,35 @@
       function openVideoInNewWindow(videoUrl) {
         window.open(videoUrl, '_blank');
         }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu(){
+        sidemenu.style.right = "0"
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px"
+      }
+    </script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzeN3iEyEbkp4cp-pODaxD4jRDcd_vuwqZBkolySfgP2tE8r557fHcMbiG6mnMy7ZO-Dg/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent Successfully"
+            setTimeout(function(){
+              msg.innerHTML= ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 
