@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style_feedback_form.css">
 </head>
 <body>
-  <form class="feedback_form" method="post" action="">
+  <form name="submit-to-google-sheet" class="feedback_form" method="post" action="">
       <p class="feedback_form_row">
         <label class="feedback_form_label" for="fName"> Name: </label>
         <input class="feedback_form_input" maxlength="1000" type="text" name="fName" id="fName" placeholder="Your Name" required>
@@ -30,7 +30,18 @@
       
 </form>
 <hr>
-  
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzGX2f7x7T6SwLHlgQP42lCevGVJ_H_8_ekKdr6hv8KLQAzIKxWy2GGwcsxB9jBGnKr/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
   
 
