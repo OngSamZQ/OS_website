@@ -21,24 +21,34 @@
       <p class="feedback_form_row">
         <label class="feedback_form_label" for="feedback"> Feedback:</label>
         <textarea class="feedback_form_textarea" name="Message" rows="6" placeholder="Message" required></textarea><br>
-          <input type="submit" value="Submit feedback" id="submit">
+          <input type="submit" value="Submit feedback" id="submit"><br>
+          <span id="msg"></span>
       </p>
+      
 
       <p>
         <input type="reset" value="Reset Everything">
       </p>
       
 </form>
+
 <hr>
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzGX2f7x7T6SwLHlgQP42lCevGVJ_H_8_ekKdr6hv8KLQAzIKxWy2GGwcsxB9jBGnKr/exec'
   const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
 
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => {
+            msg.innerHTML = "Message sent Successfully,Thank You for the feedback"
+            setTimeout(function(){
+              msg.innerHTML= ""
+            },5000)
+            form.reset()
+          })
       .catch(error => console.error('Error!', error.message))
   })
 </script>
