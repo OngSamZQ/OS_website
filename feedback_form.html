@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prectice_Form_1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="feedback_form" method="post" action="">
+      <p class="feedback_form_row">
+        <label class="feedback_form_label" for="fName"> Name: </label>
+        <input class="feedback_form_input" maxlength="1000" type="text" name="fName" id="fName" placeholder="Your Name" required>
+      </p>
+      <p class="feedback_form_row">
+        <label class="feedback_form_label" for="fstaffid"> Staff id number: </label>
+        <input class="feedback_form_input" minlength="6" maxlength="6" type="text" name="fstaffid" id="fstaffid" placeholder="6 digit staff id number" required>
+      </p>
+      <p class="feedback_form_row">
+        <label class="feedback_form_label" for="email"> Email Address:</label>
+        <input class="feedback_form_input" type="email" name="email" id="email" placeholder="Enter Email">
+      </p>
+
+      <p class="feedback_form_row">
+        <label class="feedback_form_label" for="feedback"> Feedback:</label>
+        <textarea class="feedback_form_textarea" name="Message" rows="6" placeholder="Message" required></textarea><br>
+          <input type="submit" value="Submit feedback" id="submit">
+      </p>
+
+      <p>
+        <input type="reset" value="Reset Everything">
+      </p>
+      
+</form>
+<hr>
+  
+
+  
+
+
+
+  
+</body>
+</html>
