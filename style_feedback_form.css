@@ -1,0 +1,31 @@
+.feedback_form { 
+  display: table;
+  padding: 5px 5px;
+  height: auto;
+  color: rgb(15, 61, 189);
+  width: 100%;
+}
+
+.feedback_form_row {
+  display: table-row;
+  margin-bottom: 10px;
+}
+
+.feedback_form_label {
+  text-align: left;
+  vertical-align: top;
+  width: 20%;
+}
+
+.feedback_form_label,
+.feedback_form_input,
+.feedback_form_textarea {
+  display: table-cell;
+  padding: 6px;
+}
+
+.feedback_form_input, .feedback_form_textarea {
+  width: 50%; 
+  box-sizing: border-box;
+}
+
