@@ -15,30 +15,33 @@ body{
 }
 
 #header{
-  position: relative; /* Required for the pseudo-element positioning */
   width: 100%;
   height: 100vh;
+  background-image: url(images/SamPic_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.background-image {
+
+.container{
+  padding: 10px 10%;
+}
+
+.container-intro{
+  padding-top: 20px;
+  width: 460px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(images/SamPic_1.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* To place it behind the content */
-}
-
-.section-with-black-bg {
-  background-color: #000;
-  color: #fff;
-}
-
-.container{
-  padding: 10px 10%;
+  z-index: 1000; /* Make sure it's above other elements */
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the background color as needed */
 }
 
 nav{
@@ -46,12 +49,6 @@ nav{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: fixed;
-  top: 0;
-  right: 25px;
-  width: 89%;
-  z-index: 9999; /* Set a high z-index to make sure it appears above other elements */
-  background-color: #080808; /* Optionally set a background color for the nav bar */
 }
 
 .logo{
@@ -87,7 +84,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-  margin-top: 15%;
+  margin-top: 25%;
   font-size: 30px;
 }
 
@@ -100,6 +97,40 @@ nav ul li a:hover::after{
   color: #ff004f;
 }
 
+/* ----------gallery---------- */
+.gallery-text{
+  padding-top: 60px;
+
+  text-align: center;
+  background: #222;
+}
+
+.container-gallery{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+}
+
+.swiper{
+  width: 65%;
+  height: fit-content;
+}
+
+.swiper-slide img{
+  width: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+  color: #fff;
+}
+
+.swiper .swiper-pagination-bullet-active{
+  background: #fff;
+}
+}
 
 /* ----------about---------- */
 #about{
@@ -118,17 +149,18 @@ nav ul li a:hover::after{
 }
 
 .about-col-1 img{
-  width: 100%;
+  width: 90%;
   border-radius: 15px;
 }
 
 .about-col-2{
-  flex-basis: 60%;
+  flex-basis: 65%;
 }
 
 .sub-title{
   font-size: 60px;
   font-weight: 600;
+  text-align: justify;
   color: #fff;
 }
 
@@ -242,7 +274,7 @@ a.a1:hover {
 
 #portfolio{
   padding: 50px 0;
-  }
+}
 
 .work-list{
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -417,13 +449,20 @@ nav .fas{
   display: none;
 }
 
-@media only screen and (max-width: 600px){
-  .background-image {
+@media only screen and (max-width: 850px){
+  #header{
     background-image: url(images/phone-background.png);
   }
 
+  .container-intro{
+    padding-top: 8px;
+    width: 260px;
+    font-size: 12px;
+    text-align: justify;
+  }
+
   .header-text{
-    margin-top: 100%;
+    margin-top: 40%;
     font-size: 16px;
   }
 
@@ -489,45 +528,5 @@ nav .fas{
   .copyright{
     font-size: 12px;
   }
-}
-
-/* ----------CSS Photo Gallery---------- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  
-}
-
-/* Style the wrapper div for each image */
-.gallery .img-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 300px; /* Set a fixed height for proper centering */
-  background-color: rgba(41, 40, 40, 0.6);
-  border-radius: 10px;
-}
-
-/* Style the images in the gallery */
-.gallery img {
-  max-width: 100%;
-  max-height: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Style the back link */
-.back-link {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  color: #007bff;
-  text-decoration: none;
-  padding: 30px 0;
-}
-
-.back-link:hover {
-  text-decoration: underline;
 }
 

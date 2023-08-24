@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SamOng Portfolio</title>
+    <title>Sam Ong</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/33cf700358.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+
   </head>
 
   <body>
     <div id="header">
       <div class="background-image"></div> 
       <div class="container">
-        <nav>
+        <nav class="fixed-nav">
           <img src="images/logo_4.png" class="logo">
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Porfolio</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#portfolio">Porfolio</a></li>-->
             <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
           <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Project Manager</p>
           <h1>Hi, I'm <span>Ong </span>Sam<br>from Singapore</h1>
+          <div class="container-intro">
+            <p>Dynamic exposure to supply chain and technology role have shaped me into an adaptable, results-driven professional. With a versatile skill set and a passion for impactful solutions, I excel in diverse challenges, from process optimization to innovative delivery.</p>
+          </div>
+
         </div>
       </div>
     </div>
+
   <!-- ---------About--------- -->
     <div id="about" class="section-with-black-bg">
       <div class="container">
@@ -39,22 +47,27 @@
             <img id="profileImage" src="images/SamPic_3.png">
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <P>I am a passionate lifelong learner who embraces technology to improve business processes. 
-              With 14 years of experience in logistics and 2 years IT project management, 
-              I have successfully delivered exceptional results for projects in both sectors. 
-              I am always looking for new challenges and opportunities to grow as a professional.
-              My strength lies in my ability to lead teams effectively through maintaining positive dynamics, 
-              promoting understanding while achieving goals through effective communication, 
-              and solve problems creatively, timely without compromising quality.</P>
+            <h1 class="sub-title">About</h1>
+            <P>A passionate lifelong learner who embraces technology to improve business processes.</P>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab(event, 'experience', 'images/SamPic_3.png')">Experience</p>
-              <p class="tab-links" onclick="opentab(event, 'skills', 'images/SamPic_3_3.png')">Skills</p>
+              <p class="tab-links active-link" onclick="opentab(event, 'skills', 'images/SamPic_3_3.png')">Skills</p>
+              <p class="tab-links" onclick="opentab(event, 'experience', 'images/SamPic_3.png')">Experience</p>
               <p class="tab-links" onclick="opentab(event, 'achievements', 'images/SamPic_3_2.png')">Achievements</p>
             </div>
 
-            <div class="tab-contents active-tab" id="experience">
+            <div class="tab-contents active-tab" id="skills">
+              <Ul>
+                <li><span>Supply Chain Management</span><br>Logistics, Fleet, Inventory, Warehouse management, and Order Fulfillment</li>
+                <li><span>Project Logistics</span><br>Hevay Lift vessel, Tramp shipping, Planning and Execution</li>
+                <li><span>Data analysis</span><br>Python, Excel, RapidMiner</li>
+                <li><span>App development</span><br>Python, HTML 5, CSS 3, Java Script</li>
+                <li><span>BE Technology</span><br>Revit, ArchiCAD, Navisworks, Solibri,  enscape</li>
+                <li><span>Technology</span><br>Arduino, tinkercad, SketchUP, 3DmaX, AutoCAD</li>
+              </Ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
               <Ul>
                 <li><span>Jun 2021 - Present</span><br>Project Manager (Operation), IT Project (government project)</li>
                 <li><span>Mar 2021 - Jun 2021</span><br>BIM Modeler (Internship), IT Project</li>
@@ -65,21 +78,9 @@
               </Ul>
             </div>
 
-            <div class="tab-contents" id="skills">
-              <Ul>
-                <li><span>Programming</span><br>Python, HTML 5, CSS 3, Java Script</li>
-                <li><span>Building Information Modelling (BIM)</span><br>Revit, ArchiCAD, Navisworks, Solibri,  enscape</li>
-                <li><span>Internet of things (IOT), 3D modelling</span><br>Arduino, tinkercad, SketchUP, 3DmaX, AutoCAD</li>
-                <li><span>Data analysis and visualization</span><br>RapidMiner</li>
-                <li><span>Microsoft</span><br>Words, Excel, Power Point</li>
-                <li><span>International Shipping</span><br>3rd Country shipment, incoterms, Form M, COO, Permit, DG Goods</li>
-              </Ul>
-            </div>
-
             <div class="tab-contents"id="achievements">
               <Ul>
-                <li><span>2022</span><br>Project Manager, implementation of helpdesk support model</li>
-                <li><span>2022</span><br>Project Manager, Process improvement (JIRA)</li>
+                <li><span>2022 - 2023</span><br>Process improvement (JIRA), Implementation Zendesk</li>
                 <li><span>2021 (Academic projects)</span><br>BIM Customisation Project <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/yon0IhUyQUI')">Video here</a></li>
                 <li><span>2021 (Academic projects)</span><br>BIM Design & Co-ordination <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/2TTJCLB6lLo')">Video here</a></li>
                 <li><span>2021 (SGUS)</span><br>Mentioned by DPM Heng Swee Keat’s Budget Debate <a href="#" class="a1" onclick="openVideoInNewWindow('https://youtu.be/R49-y83fZE8')">Video here</a></li>
@@ -93,8 +94,48 @@
       </div>
     </div>
 
+
+    <!-- ---------gallery--------- -->
+  <div id="gallery">
+    
+    <div class="container">
+      <div class="gallery-text"><h1>Project Gallery</h1></div>
+      <div class="container-gallery">
+        
+        <div class="swiper">
+          <div class="swiper-wrapper">          
+            <div class="swiper-slide"><img src="photos/photo1.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo2.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo3.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo4.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo5.JPG" alt="" width="240" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo6.JPG" alt="" width="240" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo7.JPG" alt="" width="240" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo8.JPG" alt="" width="240" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo9.JPG" alt="" width="240" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo10.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo11.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo12.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_1.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_2.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_3.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_4.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_5.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_6.JPG" alt="" width="480" height="540"></div>
+            <div class="swiper-slide"><img src="photos/photo_2_7.JPG" alt="" width="480" height="540"></div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
     <!-- ---------services--------- -->
-    <div id="services" class="section-with-black-bg">
+    <!-- <div id="services" class="section-with-black-bg">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
@@ -130,9 +171,9 @@
 
         </div>
       </div>
-    </div>
-    
-    <!-- ---------Porfolio--------- -->
+    </div> -->
+  
+    <!-- ---------Porfolio---------
     <div id="portfolio" class="section-with-black-bg">
       <div class="container">
         <h1 class="sub-title">Porfolio</h1>
@@ -173,11 +214,11 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
         <!-- ----------hide for the see more button---------- -->
         <!-- <a href="#" class="btn">See more</a> -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
 
     <!-- ---------Contact--------- -->
     <div id="contact" class="section-with-black-bg">
@@ -187,9 +228,9 @@
             <h1 class="sub-title">Contact Me</h1>
             <p><i class="fa-regular fa-paper-plane"></i> samongzq@ymail.com</p>
             <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <!-- <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
               <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a> -->
               <a href="https://www.linkedin.com/in/ong-sam-4275533a/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
             <!-- ----------hide for the see more button---------- -->
@@ -209,7 +250,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p><i class="fa-sharp fa-regular fa-copyright"></i> 2023 Ong Sam. All rights reserved.</p>
+        <p><i class="fa-sharp fa-regular fa-copyright"></i> 2023. All rights reserved.</p>
       </div>
     </div>
 
@@ -264,6 +305,28 @@
           })
           .catch(error => console.error('Error!', error.message))
       })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
     </script>
 
 
